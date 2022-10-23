@@ -24,30 +24,30 @@ function ContactMe({}: Props) {
 
   return (
     <div className="relative flex flex-col items-center h-screen px-10 mx-auto text-center md:text-left md:flex-row max-w-7xl justify-evenly">
-      <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
+      <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-md md:text-2xl">
         ContactMe
       </h3>
 
       <div className="flex flex-col space-y-10">
-        <h4 className="text-4xl font-semibold text-center">
+        <h4 className="text-xl font-semibold text-center md:text-4xl">
           I have got just you need.{" "}
           <span className="decoration-[#F7AB0A]/50 underline">Lets Talk.</span>
         </h4>
 
-        <div className="space-y-10">
+        <div className="space-y-5 md:space-y-5">
           <div className="flex items-center justify-center space-x-5">
-            <PhoneIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
-            <p className="text-2xl">+1234567890</p>
+            <PhoneIcon className="text-[#F7AB0A] h-4 w-5 md:h-7 md:w-7 animate-pulse" />
+            <p className="text-lg md:text-2xl">+1234567890</p>
           </div>
 
           <div className="flex items-center justify-center space-x-5">
-            <EnvelopeIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
-            <p className="text-2xl">timur7dian84@gmail.com</p>
+            <EnvelopeIcon className="text-[#F7AB0A] h-5 w-5 md:h-7 md:w-7 animate-pulse" />
+            <p className="text-lg md:text-2xl">timur7dian84@gmail.com</p>
           </div>
 
           <div className="flex items-center justify-center space-x-5">
-            <MapPinIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
-            <p className="text-2xl">123 Developer Lane</p>
+            <MapPinIcon className="text-[#F7AB0A] h-5 w-5 md:h-7 md:w-7 animate-pulse" />
+            <p className="text-lg md:text-2xl">123 Developer Lane</p>
           </div>
         </div>
 
@@ -80,7 +80,7 @@ function ContactMe({}: Props) {
             className="contactInput"
           ></textarea>
           <button
-            className="bg-[#F7AB0A] py-5 px-10 rounded-md text-black font-bold"
+            className="bg-[#F7AB0A] py-3 px-8 md:py-5 md:px-10 rounded-md text-black font-bold"
             type="submit"
           >
             Submit

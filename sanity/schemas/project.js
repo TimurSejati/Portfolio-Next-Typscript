@@ -33,5 +33,16 @@ export default {
 			title: "LinkToBuild",
 			type: "url"
 		},
+		{
+			name: "linkToDeploy",
+			title: "LinkToDeploy",
+			type: "url"
+		},
+		{
+			name: "categories",
+			title: "Categories",
+			type: "array",
+			of: [{ type: 'string' }]
+		},
 	],
 }

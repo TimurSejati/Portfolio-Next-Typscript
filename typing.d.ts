@@ -56,8 +56,10 @@ export interface Project extends SanityBody {
   _type: "project";
   image: Image;
   linkToBuild: string;
+  linkToDeploy: string;
   summary: string;
   technologies: Technology[];
+  categories: Category[];
 }
 
 export interface Social extends SanityBody {
@@ -65,3 +67,5 @@ export interface Social extends SanityBody {
   title: string;
   url: string;
 }
+
+export type Category = "Web" | "Mobile" | "Design";

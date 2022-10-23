@@ -15,7 +15,7 @@ export default function About({ pageInfo }: Props) {
       transition={{ duration: 1.5 }}
       className="relative flex flex-col items-center h-screen px-10 mx-auto text-center md:text-left md:flex-row max-w-7xl justify-evenly"
     >
-      <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
+      <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-md md:text-2xl">
         About
       </h3>
 
@@ -25,16 +25,18 @@ export default function About({ pageInfo }: Props) {
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
         src={urlFor(pageInfo?.profilePic).url()}
-        className="flex-shrink-0 object-cover w-56 h-70 -mb-20 rounded-full md:mb-0 md:rounded-lg md:w-64 md:h-95 xl:w-[450px] xl:h-[500px]"
+        className="flex-shrink-0 object-cover w-56 h-70 -mb-36 rounded-full md:mb-0 md:rounded-lg md:w-64 md:h-95 xl:w-[450px] xl:h-[500px]"
       />
 
       <div className="px-0 space-y-10 md:px-10">
-        <h4 className="text-4xl font-semibold">
+        <h4 className="text-lg font-semibold md:text-4xl">
           Here is a{" "}
           <span className="underline decoration-[#F7AB0A]/50">little</span>{" "}
           background
         </h4>
-        <p className="text-base">{pageInfo?.backgroundInformation}</p>
+        <p className="text-sm md:text-base">
+          {pageInfo?.backgroundInformation}
+        </p>
       </div>
     </motion.div>
   );

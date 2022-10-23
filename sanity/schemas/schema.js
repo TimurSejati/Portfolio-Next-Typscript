@@ -17,6 +17,7 @@ export default createSchema({
     pageInfo,
     project,
     skill,
-    social
+    social,
+    category
   ]),
 })
