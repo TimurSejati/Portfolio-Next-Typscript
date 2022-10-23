@@ -34,6 +34,7 @@ export default function Header({ socials }: Props) {
             url={social.url}
             fgColor="gray"
             bgColor="transparent"
+            style={{ width: 40, height: 40 }}
           />
         ))}
       </motion.div>
@@ -58,6 +59,7 @@ export default function Header({ socials }: Props) {
             network="email"
             fgColor="gray"
             bgColor="transparent"
+            style={{ width: 40, height: 40 }}
           />
           <p className="hidden text-sm text-gray-400 uppercase md:inline-flex">
             Get In Touch

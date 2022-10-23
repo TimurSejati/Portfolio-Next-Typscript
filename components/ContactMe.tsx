@@ -34,7 +34,7 @@ function ContactMe({}: Props) {
           <span className="decoration-[#F7AB0A]/50 underline">Lets Talk.</span>
         </h4>
 
-        <div className="space-y-5 md:space-y-5">
+        <div className="space-y-2 md:space-y-5">
           <div className="flex items-center justify-center space-x-5">
             <PhoneIcon className="text-[#F7AB0A] h-4 w-5 md:h-7 md:w-7 animate-pulse" />
             <p className="text-lg md:text-2xl">+1234567890</p>

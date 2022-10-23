@@ -18,6 +18,5 @@ export default createSchema({
     project,
     skill,
     social,
-    category
   ]),
 })

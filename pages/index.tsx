@@ -16,6 +16,7 @@ import { fetchPageInfo } from "../utils/fetchPageInfo";
 import { fetchProjects } from "../utils/fetchProjects";
 import { fetchSkills } from "../utils/fetchSkills";
 import { fetchSocials } from "../utils/fetchSocials";
+import { BsArrowUpCircle } from "react-icons/bs";
 
 type Props = {
   pageInfo: PageInfo;
@@ -27,7 +28,7 @@ type Props = {
 
 const Home = ({ pageInfo, experiences, projects, skills, socials }: Props) => {
   return (
-    <div className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
+    <div className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
       <Head>
         <title>Timur Portfolio</title>
       </Head>
@@ -50,7 +51,7 @@ const Home = ({ pageInfo, experiences, projects, skills, socials }: Props) => {
         <Skills skills={skills} />
       </section>
 
-      <section id="projects" className="snap-start">
+      <section id="projects" className="snap-center">
         <Projects projects={projects} />
       </section>
 
@@ -61,11 +62,7 @@ const Home = ({ pageInfo, experiences, projects, skills, socials }: Props) => {
       <Link href="#hero">
         <footer className="sticky w-full cursor-pointer bottom-5">
           <div className="flex items-center justify-center">
-            <img
-              className="w-10 h-10 rounded-full filter grayscale hover:grayscale-0"
-              src="https://res.cloudinary.com/radhasjt/image/upload/v1605506039/avatar/ku9lpduuxim3s5fsnfzj.jpg"
-              alt=""
-            />
+            <BsArrowUpCircle className="animate-pulse" size={26} />
           </div>
         </footer>
       </Link>
