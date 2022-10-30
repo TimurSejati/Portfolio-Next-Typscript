@@ -31,7 +31,7 @@ function Skills({ skills }: Props) {
           <Skill key={skill._id} skill={skill} directionLeft />
         ))}
       </div>
-      <div className="w-full absolute top-[30%] bg-[#F7AB0a]/10 left-0 h-[500px] -skew-y-12"></div>
+      <div className="w-full absolute top-[30%] bg-[#0045FA]/30 left-0 h-[500px] -skew-y-12"></div>
     </motion.div>
   );
 }

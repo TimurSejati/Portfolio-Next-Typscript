@@ -24,7 +24,7 @@ const ProjectCard: FunctionComponent<{
   setShowDetail,
 }) => {
   return (
-    <div>
+    <div className="relative md:static">
       <img
         src={urlFor(image).url()}
         alt={title}
@@ -35,17 +35,21 @@ const ProjectCard: FunctionComponent<{
       <p className="my-2 text-center text-gray-300">{title}</p>
 
       {showDetail === _id && (
-        <div className="absolute top-0 left-0 z-10 grid w-full h-auto p-3 text-black bg-[#292929] md:grid-cols-2 gap-x-12">
+        <div className="absolute top-0 md:top-72 left-0 right-0 m-auto z-10 grid w-full md:w-[1200px] h-auto p-3 text-black bg-[#292929] md:grid-cols-2 gap-x-12">
           <div>
-            <img src={urlFor(image).url()} alt={title} />
+            <img
+              src={urlFor(image).url()}
+              alt={title}
+              className="max-h-[400px] min-w-full"
+            />
             <div className="flex justify-center my-4 space-x-3">
               {linkToBuild != null && (
                 <a
                   href={linkToBuild}
-                  className="flex items-center px-4 py-2 space-x-3 border rounded-full border-[#F7AB0A] text-md dark:bg-dark-200 cursor-pointer"
+                  className="flex items-center px-4 py-2 space-x-3 border rounded-full border-[#0045FA] text-md dark:bg-dark-200 cursor-pointer"
                 >
-                  <AiFillGithub color="#F7AB0A" />{" "}
-                  <span className="text-[#F7AB0A] text-xs md:text-md">
+                  <AiFillGithub color="#0045FA" />{" "}
+                  <span className="text-[#0045FA] text-xs md:text-md">
                     Github
                   </span>
                 </a>
@@ -53,10 +57,10 @@ const ProjectCard: FunctionComponent<{
               {linkToDeploy != null && (
                 <a
                   href={linkToDeploy}
-                  className="flex items-center px-4 py-2 space-x-3 border rounded-full border-[#F7AB0A] text-md dark:bg-dark-200 cursor-pointer"
+                  className="flex items-center px-4 py-2 space-x-3 border rounded-full border-[#0045FA] text-md dark:bg-dark-200 cursor-pointer"
                 >
-                  <AiFillProject color="#F7AB0A" />{" "}
-                  <span className="text-[#F7AB0A] md:text-md text-xs">
+                  <AiFillProject color="#0045FA" />{" "}
+                  <span className="text-[#0045FA] md:text-md text-xs">
                     Project
                   </span>
                 </a>

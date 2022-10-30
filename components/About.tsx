@@ -31,12 +31,15 @@ export default function About({ pageInfo }: Props) {
       <div className="px-0 space-y-10 md:px-10">
         <h4 className="text-lg font-semibold md:text-4xl">
           Here is a{" "}
-          <span className="underline decoration-[#F7AB0A]/50">little</span>{" "}
+          <span className="underline decoration-[#0045FA]/50">little</span>{" "}
           background
         </h4>
         <p className="text-sm md:text-base">
           {pageInfo?.backgroundInformation}
         </p>
+        <div className="w-32 text-center heroButtonActive hover:text-white hover:bg-[#0045FA] cursor-pointer">
+          Hire Me
+        </div>
       </div>
     </motion.div>
   );

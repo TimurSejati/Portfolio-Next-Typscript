@@ -28,7 +28,7 @@ type Props = {
 
 const Home = ({ pageInfo, experiences, projects, skills, socials }: Props) => {
   return (
-    <div className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
+    <div className="bg-[#212022] text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#0045FA]/80">
       <Head>
         <title>Timur Portfolio</title>
       </Head>
@@ -59,13 +59,16 @@ const Home = ({ pageInfo, experiences, projects, skills, socials }: Props) => {
         <ContactMe />
       </section>
 
-      <Link href="#hero">
-        <footer className="sticky w-full cursor-pointer bottom-5">
-          <div className="flex items-center justify-center">
-            <BsArrowUpCircle className="animate-pulse" size={26} />
-          </div>
-        </footer>
-      </Link>
+      <footer className="sticky w-full bottom-5">
+        <div className="flex items-center justify-end mr-4">
+          <Link href="#hero">
+            <BsArrowUpCircle
+              className="cursor-pointer animate-pulse "
+              size={26}
+            />
+          </Link>
+        </div>
+      </footer>
     </div>
   );
 };

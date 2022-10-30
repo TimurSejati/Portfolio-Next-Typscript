@@ -31,22 +31,22 @@ function ContactMe({}: Props) {
       <div className="flex flex-col space-y-10">
         <h4 className="text-xl font-semibold text-center md:text-4xl">
           I have got just you need.{" "}
-          <span className="decoration-[#F7AB0A]/50 underline">Lets Talk.</span>
+          <span className="decoration-[#0045FA]/50 underline">Lets Talk.</span>
         </h4>
 
         <div className="space-y-2 md:space-y-5">
           <div className="flex items-center justify-center space-x-5">
-            <PhoneIcon className="text-[#F7AB0A] h-4 w-5 md:h-7 md:w-7 animate-pulse" />
+            <PhoneIcon className="text-[#0045FA] h-4 w-5 md:h-7 md:w-7 animate-pulse" />
             <p className="text-lg md:text-2xl">+1234567890</p>
           </div>
 
           <div className="flex items-center justify-center space-x-5">
-            <EnvelopeIcon className="text-[#F7AB0A] h-5 w-5 md:h-7 md:w-7 animate-pulse" />
+            <EnvelopeIcon className="text-[#0045FA] h-5 w-5 md:h-7 md:w-7 animate-pulse" />
             <p className="text-lg md:text-2xl">timur7dian84@gmail.com</p>
           </div>
 
           <div className="flex items-center justify-center space-x-5">
-            <MapPinIcon className="text-[#F7AB0A] h-5 w-5 md:h-7 md:w-7 animate-pulse" />
+            <MapPinIcon className="text-[#0045FA] h-5 w-5 md:h-7 md:w-7 animate-pulse" />
             <p className="text-lg md:text-2xl">123 Developer Lane</p>
           </div>
         </div>
@@ -80,7 +80,7 @@ function ContactMe({}: Props) {
             className="contactInput"
           ></textarea>
           <button
-            className="bg-[#F7AB0A] py-3 px-8 md:py-5 md:px-10 rounded-md text-black font-bold"
+            className="bg-[#0045FA]/70 py-3 px-8 md:py-5 md:px-10 rounded-md text-white font-bold"
             type="submit"
           >
             Submit

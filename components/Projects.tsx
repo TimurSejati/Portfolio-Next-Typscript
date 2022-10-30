@@ -35,11 +35,11 @@ function Projects({ projects }: Props) {
 
   return (
     <div className="relative z-0 flex flex-col items-center h-auto max-w-full mx-auto space-y-32 overflow-hidden text-left md:h-screen md:space-y-52">
-      <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-md md:text-2xl z-10 space-y-3">
+      <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-md md:text-2xl z-10 space-y-4">
         Projects
       </h3>
 
-      <div className="flex flex-col items-center justify-start space-y-24">
+      <div className="flex flex-col items-center justify-start space-y-20">
         <div className="absolute z-10 text-sm text-gray-500 uppercase top-40">
           <ProjectsNavbar
             handlerFilterCategory={handlerFilterCategory}
@@ -48,7 +48,7 @@ function Projects({ projects }: Props) {
         </div>
 
         <div className="overflow-y-scroll max-h-[500px] md:max-h-screen">
-          <div className="relative grid grid-cols-2 gap-4 my-3 md:grid-cols-12 ">
+          <div className="grid grid-cols-2 gap-4 my-3 md:grid-cols-12">
             {projectsData.map((project) => (
               <div
                 key={project.title}
