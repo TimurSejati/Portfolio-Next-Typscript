@@ -28,8 +28,8 @@ export default function About({ pageInfo }: Props) {
         className="flex-shrink-0 object-cover w-56 h-70 -mb-36 rounded-full md:mb-0 md:rounded-lg md:w-64 md:h-95 xl:w-[450px] xl:h-[500px]"
       />
 
-      <div className="px-0 space-y-10 md:px-10">
-        <h4 className="text-lg font-semibold md:text-4xl">
+      <div className="px-0 -mb-24 space-y-10 md:mb-0 md:px-10">
+        <h4 className="-mb-5 text-lg font-semibold md:mb-0 md:text-4xl">
           Here is a{" "}
           <span className="underline decoration-[#0045FA]/50">little</span>{" "}
           background
@@ -37,7 +37,7 @@ export default function About({ pageInfo }: Props) {
         <p className="text-sm md:text-base">
           {pageInfo?.backgroundInformation}
         </p>
-        <div className="w-32 text-center heroButtonActive hover:text-white hover:bg-[#0045FA] cursor-pointer">
+        <div className="w-full md:w-32 text-center heroButtonActive hover:text-white hover:bg-[#0045FA] cursor-pointer p-2">
           Hire Me
         </div>
       </div>

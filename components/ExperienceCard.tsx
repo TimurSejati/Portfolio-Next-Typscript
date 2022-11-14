@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Experience } from "../typing";
 import { urlFor } from "../sanity";
+import Image from "next/image";
 
 type Props = {
   experience: Experience;
@@ -17,7 +18,7 @@ export default function ExperienceCard({ experience }: Props) {
         viewport={{ once: true }}
         className="w-24 h-24 md:w-32 md:h-32 rounded-full xl:w-[150px] xl:h-[150px] object-cover object-center"
         src={urlFor(experience?.companyImage).url()}
-        alt=""
+        alt={experience?.companyImage.toString()}
       />
 
       <div className="px-0 md:px-10">
@@ -30,6 +31,15 @@ export default function ExperienceCard({ experience }: Props) {
               src={urlFor(technology.image).url()}
               className="m-1 rounded-full w-7 h-7 md:w-10 md:h-10"
             />
+
+            // <Image
+            //   key={technology._id}
+            //   src={urlFor(technology.image).url()}
+            //   className="m-1 rounded-full w-7 h-7 md:w-10 md:h-10"
+            //   width="40px"
+            //   height="40px"
+            //   alt={technology.image.toString()}
+            // />
           ))}
         </div>
         <p className="py-5 text-xs text-gray-300 uppercase md:text-md">

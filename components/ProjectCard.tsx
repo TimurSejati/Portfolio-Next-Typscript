@@ -25,10 +25,19 @@ const ProjectCard: FunctionComponent<{
 }) => {
   return (
     <div className="relative md:static">
-      <img
+      {/* <img
         src={urlFor(image).url()}
         alt={title}
         className="h-56 cursor-pointer w-80"
+        onClick={() => setShowDetail(_id)}
+      /> */}
+
+      <Image
+        src={urlFor(image).url()}
+        alt={title}
+        width="320px"
+        height="224px"
+        style={{ cursor: "pointer" }}
         onClick={() => setShowDetail(_id)}
       />
 

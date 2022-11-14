@@ -47,7 +47,7 @@ function Projects({ projects }: Props) {
           />
         </div>
 
-        <div className="overflow-y-scroll max-h-[500px] md:max-h-screen">
+        <div className="overflow-y-scroll max-h-[500px] md:max-h-[600px]">
           <div className="grid grid-cols-2 gap-4 my-3 md:grid-cols-12">
             {projectsData.map((project) => (
               <div

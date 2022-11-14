@@ -37,7 +37,7 @@ function ContactMe({}: Props) {
         <div className="space-y-2 md:space-y-5">
           <div className="flex items-center justify-center space-x-5">
             <PhoneIcon className="text-[#0045FA] h-4 w-5 md:h-7 md:w-7 animate-pulse" />
-            <p className="text-lg md:text-2xl">+1234567890</p>
+            <p className="text-lg md:text-2xl">+62 895 0843 6275</p>
           </div>
 
           <div className="flex items-center justify-center space-x-5">
@@ -47,7 +47,7 @@ function ContactMe({}: Props) {
 
           <div className="flex items-center justify-center space-x-5">
             <MapPinIcon className="text-[#0045FA] h-5 w-5 md:h-7 md:w-7 animate-pulse" />
-            <p className="text-lg md:text-2xl">123 Developer Lane</p>
+            <p className="text-lg md:text-2xl">Muntilan, Jawa Tengah</p>
           </div>
         </div>
 
