@@ -4,11 +4,11 @@
 
 @layer components {
   .heroButton {
-    @apply px-3 md:px-6 md:py-2 border border-[#242424] rounded-full uppercase text-sm md:text-sm tracking-widest text-gray-500 transition-all hover:border-[#0045FA] hover:text-[#0045FA];
+    @apply px-3 py-1 md:px-6 md:py-2 border border-[#242424] rounded-full uppercase text-sm md:text-sm tracking-widest text-gray-500 transition-all hover:border-[#0045FA] hover:text-[#0045FA];
   }
 
   .heroButtonActive {
-    @apply px-3 md:px-6 md:py-2 border border-[#242424] rounded-full uppercase text-sm md:text-sm tracking-widest text-gray-500 transition-all border-[#0045FA] text-[#0045FA];
+    @apply px-3 py-1 md:px-6 md:py-2 border border-[#242424] rounded-full uppercase text-sm md:text-sm tracking-widest text-gray-500 transition-all border-[#0045FA] text-[#0045FA];
   }
 
   .contactInput {

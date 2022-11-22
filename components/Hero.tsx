@@ -56,7 +56,7 @@ export default function Hero({ pageInfo }: Props) {
             <button className="heroButton">Skills</button>
           </Link>
           <Link href="#projects">
-            <button className="heroButton">Projects</button>
+            <button className="heroButton">Portofolio</button>
           </Link>
         </div>
       </div>

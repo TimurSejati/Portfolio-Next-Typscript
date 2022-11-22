@@ -16,7 +16,7 @@ export default function ExperienceCard({ experience }: Props) {
         transition={{ duration: 1.2 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="w-24 h-24 md:w-32 md:h-32 rounded-full xl:w-[150px] xl:h-[150px] object-cover object-center"
+        className="w-24 h-24 md:w-28 md:h-28 rounded-full xl:w-[110px] xl:h-[110px] object-cover object-center"
         src={urlFor(experience?.companyImage).url()}
         alt={experience?.companyImage.toString()}
       />
@@ -29,7 +29,7 @@ export default function ExperienceCard({ experience }: Props) {
             <img
               key={technology._id}
               src={urlFor(technology.image).url()}
-              className="m-1 rounded-full w-7 h-7 md:w-10 md:h-10"
+              className="m-1 rounded-full w-7 h-7 md:w-8 md:h-8"
             />
 
             // <Image
