@@ -41,8 +41,8 @@ const ProjectCard: FunctionComponent<{
 
       {showDetail === _id && (
         <>
-          <div className="fixed inset-0 z-50 mt-24 md:-mt-32">
-            <div className="absolute top-0 md:top-72 left-0 right-0 m-auto z-10 grid w-full md:w-[1200px] h-auto p-3 text-black bg-white shadow-lg rounded-xl dark:bg-slate-800 md:grid-cols-2 gap-x-12 z-999">
+          <div className="fixed inset-0 z-50 mx-4 mt-24 md:mx-6 md:-mt-36">
+            <div className="absolute top-0 left-0 right-0 z-10 grid w-full h-auto p-3 m-auto text-black lg:w-[1200px] bg-white shadow-lg md:top-72 rounded-xl dark:bg-slate-800 md:grid-cols-2 gap-x-12 z-999">
               <div>
                 <img
                   src={urlFor(image).url()}

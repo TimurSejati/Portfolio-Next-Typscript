@@ -26,7 +26,7 @@ function Skill({ directionLeft, skill }: Props) {
       </div>
       <div className="absolute z-0 w-12 h-12 transition duration-300 ease-in-out rounded-lg opacity-0 group-hover:opacity-80 group-hover:bg-white md:w-24 md:h-24">
         <div className="flex items-center justify-center h-full">
-          <p className="text-xs font-bold text-black opacity-100 md:text-md">
+          <p className="text-[7px] md:text-xs font-bold text-black opacity-100 lg:text-md">
             {skill?.title}
             {/* {skill?.progress}% */}
           </p>

@@ -61,7 +61,7 @@ function Portfolio({ projects }: Props) {
         </div>
 
         <div className="overflow-y-scroll max-h-[600px] md:max-h-[900px] relative">
-          <div className="grid grid-cols-2 gap-4 my-3 md:grid-cols-12">
+          <div className="grid grid-cols-12 gap-4 my-3 md:grid-cols-12">
             {projectsData.map((project) => (
               <div
                 key={project.title}

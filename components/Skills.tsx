@@ -25,7 +25,7 @@ function Skills({ skills }: Props) {
             </p>
           </div>
         </div>
-        <div className="grid grid-cols-8 gap-5 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10">
+        <div className="grid grid-cols-5 gap-5 sm:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10">
           {skills?.slice(0, skills.length / 2).map((skill) => (
             <Skill key={skill._id} skill={skill} />
           ))}
