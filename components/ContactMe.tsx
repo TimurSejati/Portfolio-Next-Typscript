@@ -19,75 +19,89 @@ type Props = {};
 function ContactMe({}: Props) {
   const { register, handleSubmit } = useForm<Inputs>();
   const onSubmit: SubmitHandler<Inputs> = (formdata) => {
-    window.location.href = `mailto:timur7dian84@gmail.com?subject=${formdata.subject}&body=Hi, my name is ${formdata.name}. ${formdata.message} (${formdata.email}})`;
+    window.location.href = `mailto:timur7dian84@gmail.com?body=Hallo, namaku ${formdata.name}. ${formdata.message} (${formdata.email}})`;
   };
 
   return (
-    <div className="relative flex flex-col items-center h-screen px-10 mx-auto text-center md:text-left md:flex-row max-w-7xl justify-evenly">
-      <h3 className="absolute top-24 md:top-14 uppercase tracking-[20px] text-gray-500 text-md md:text-2xl">
-        ContactMe
-      </h3>
-
-      <div className="flex flex-col space-y-10">
-        <h4 className="text-xl font-semibold text-center md:text-4xl">
-          I have got just you need.{" "}
-          <span className="decoration-[#0045FA]/50 underline">Lets Talk.</span>
-        </h4>
-
-        <div className="space-y-2 md:space-y-5">
-          <div className="flex items-center justify-center space-x-5">
-            <PhoneIcon className="text-[#0045FA] h-4 w-5 md:h-7 md:w-7 animate-pulse" />
-            <p className="text-lg md:text-2xl">+62 895 0843 6275</p>
-          </div>
-
-          <div className="flex items-center justify-center space-x-5">
-            <EnvelopeIcon className="text-[#0045FA] h-5 w-5 md:h-7 md:w-7 animate-pulse" />
-            <p className="text-lg md:text-2xl">timur7dian84@gmail.com</p>
-          </div>
-
-          <div className="flex items-center justify-center space-x-5">
-            <MapPinIcon className="text-[#0045FA] h-5 w-5 md:h-7 md:w-7 animate-pulse" />
-            <p className="text-lg md:text-2xl">Muntilan, Jawa Tengah</p>
+    <section id="contact" className="pb-32 pt-36 dark:bg-slate-700">
+      <div className="container">
+        <div className="w-full px-4">
+          <div className="max-w-xl mx-auto mb-16 text-center">
+            <h4 className="mb-2 text-lg font-semibold text-primary">Contact</h4>
+            <h2 className="mb-4 text-3xl font-bold text-dark dark:text-white sm:text-4xl lg:text-5xl">
+              Hubungi Kami
+            </h2>
+            <p className="font-medium text-md text-secondary md:text-lg">
+              Jangan ragu untuk mengirimi saya pesan jika Anda memiliki beberapa
+              penawaran menarik atau hanya ingin menyapa, saya akan mencoba yang
+              terbaik untuk menghubungi Anda kembali!
+            </p>
           </div>
         </div>
 
-        <form
-          onSubmit={handleSubmit(onSubmit)}
-          className="flex flex-col mx-auto space-y-2 w-fit"
-        >
-          <div className="flex space-x-2">
-            <input
-              {...register("name")}
-              placeholder="Name"
-              className="contactInput"
-              type="text"
-            />
-            <input
-              {...register("email")}
-              placeholder="Email"
-              className="contactInput"
-              type="text"
-            />
+        <form onSubmit={handleSubmit(onSubmit)}>
+          <div className="w-full lg:mx-auto lg:w-2/3">
+            <div className="flex flex-wrap items-center justify-evenly">
+              <div className="flex items-center justify-center w-full p-4 mx-4 mb-10 text-center rounded-lg md:w-1/3 dark:bg-dark bg-slate-200 text-dark dark:text-white">
+                <EnvelopeIcon className="w-5 h-5 mr-3 md:h-7 md:w-7" />
+                <div> timur7dian84@gmail.com</div>
+              </div>
+              <div className="flex items-center justify-center w-full p-4 mx-4 mb-10 text-center rounded-lg md:w-1/3 dark:bg-dark bg-slate-200 text-dark dark:text-white">
+                <PhoneIcon className="w-5 h-4 mr-3 md:h-7 md:w-7" />
+                <div> (+62) 895-0843-6275</div>
+              </div>
+            </div>
+            <div className="w-full px-4 mb-8">
+              <label
+                htmlFor="name"
+                className="text-base font-bold text-primary"
+              >
+                Nama
+              </label>
+              <input
+                {...register("name")}
+                type="text"
+                id="name"
+                className="w-full p-3 rounded-md bg-slate-200 dark:bg-dark text-dark focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary dark:text-white"
+              />
+            </div>
+            <div className="w-full px-4 mb-8">
+              <label
+                htmlFor="email"
+                className="text-base font-bold text-primary"
+              >
+                Email
+              </label>
+              <input
+                {...register("email")}
+                type="email"
+                id="email"
+                className="w-full p-3 rounded-md bg-slate-200 dark:bg-dark text-dark focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary dark:text-white"
+              />
+            </div>
+            <div className="w-full px-4 mb-8">
+              <label
+                htmlFor="pesan"
+                className="text-base font-bold text-primary"
+              >
+                Message
+              </label>
+              <textarea
+                {...register("message")}
+                typeof="text"
+                id="message"
+                className="w-full h-32 p-3 rounded-md dark:text-white bg-slate-200 dark:bg-dark text-dark focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+              ></textarea>
+            </div>
+            <div className="w-full px-4">
+              <button className="w-full px-8 py-3 text-base font-semibold text-white transition duration-500 rounded-full bg-primary hover:opacity-80 hover:shadow-lg">
+                Kirim
+              </button>
+            </div>
           </div>
-          <input
-            {...register("subject")}
-            placeholder="Subject"
-            className="contactInput"
-            type="text"
-          />
-          <textarea
-            {...register("message")}
-            className="contactInput"
-          ></textarea>
-          <button
-            className="bg-[#0045FA]/70 py-3 px-8 md:py-5 md:px-10 rounded-md text-white font-bold"
-            type="submit"
-          >
-            Submit
-          </button>
         </form>
       </div>
-    </div>
+    </section>
   );
 }
 

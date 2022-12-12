@@ -2,16 +2,65 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
-  .heroButton {
-    @apply px-3 py-1 md:px-6 md:py-2 border border-[#242424] rounded-full uppercase text-sm md:text-sm tracking-widest text-gray-500 transition-all hover:border-[#0045FA] hover:text-[#0045FA];
+@layer utilities {
+  .scrollbar::-webkit-scrollbar {
+    width: 20px;
+    height: 20px;
   }
 
-  .heroButtonActive {
-    @apply px-3 py-1 md:px-6 md:py-2 border border-[#242424] rounded-full uppercase text-sm md:text-sm tracking-widest text-gray-500 transition-all border-[#0045FA] text-[#0045FA];
+  .scrollbar::-webkit-scrollbar-track {
+    border-radius: 100vh;
+    background: #f7f4ed;
   }
 
-  .contactInput {
-    @apply outline-none bg-slate-400/10 text-xs md:text-lg rounded-sm border-b px-2 py-2 md:px-6 md:py-4 border-[#242424] text-gray-500 placeholder-gray-500 transition-all focus:border-[#0045FA] focus:text-[#0045FA] hover:border-[#0045FA];
+  .scrollbar::-webkit-scrollbar-thumb {
+    background: #e0cbcb !important;
+    border-radius: 100vh;
+    border: 3px solid #f6f7ed;
   }
+
+  .scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #c0a0b9;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+.navbar-fixed {
+  @apply fixed z-[9999] bg-white bg-opacity-80 backdrop-blur-sm dark:bg-dark dark:bg-opacity-50;
+  box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.1);
+}
+
+.hamburger-line {
+  @apply my-2 block h-[2px] w-[30px] bg-dark dark:bg-white;
+}
+
+.hamburger-active > span:nth-child(1) {
+  @apply rotate-45;
+}
+
+.hamburger-active > span:nth-child(2) {
+  @apply scale-0;
+}
+
+.hamburger-active > span:nth-child(3) {
+  @apply -rotate-45;
+}
+
+#dark-toggle:checked ~ label div.toggle-circle {
+  @apply translate-x-3;
+}
+
+.heroButton {
+  @apply px-3 py-1 text-sm tracking-widest text-gray-500 uppercase transition-all rounded-full md:px-6 md:py-2 md:text-sm hover:bg-opacity-90;
+}
+
+.heroButtonActive {
+  @apply px-3 py-1 text-sm tracking-widest text-white uppercase transition-all rounded-full md:px-6 md:py-2 md:text-sm bg-primary;
 }

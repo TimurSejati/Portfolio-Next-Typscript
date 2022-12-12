@@ -1,5 +1,4 @@
 import React from "react";
-import { motion } from "framer-motion";
 import Skill from "./Skill";
 import { Skill as SkillType } from "../typing";
 
@@ -9,30 +8,33 @@ type Props = {
 
 function Skills({ skills }: Props) {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      transition={{ duration: 1.5 }}
-      className="h-screen flex relative flex-col text-center md:text-left xl:flex-row max-w-[2000px] xl:px-10 min-h-screen justify-center xl:space-y-2 mx-auto items-center"
+    <section
+      id="portfolio"
+      className="pb-32 bg-slate-100 pt-36 dark:bg-slate-700"
     >
-      <h3 className="absolute top-24 md:top-14 uppercase tracking-[20px] text-gray-500 text-md md:text-2xl">
-        Skills
-      </h3>
-
-      <h3 className="absolute top-32 md:top-24 uppercase tracking-[3px] text-gray-500 text-xs md:text-sm">
-        Hover over a skill for currency profieciency
-      </h3>
-
-      <div className="grid grid-cols-5 gap-5">
-        {skills?.slice(0, skills.length / 2).map((skill) => (
-          <Skill key={skill._id} skill={skill} />
-        ))}
-        {skills?.slice(skills.length / 2, skills.length).map((skill) => (
-          <Skill key={skill._id} skill={skill} directionLeft />
-        ))}
+      <div className="container">
+        <div className="w-full px-4">
+          <div className="max-w-xl mx-auto mb-16 text-center">
+            <h4 className="mb-2 text-lg font-semibold text-primary">Skills</h4>
+            <h2 className="mb-4 text-3xl font-bold text-dark dark:text-white sm:text-4xl lg:text-5xl">
+              Teknologi & Alat
+            </h2>
+            <p className="font-medium text-md text-secondary md:text-lg">
+              Teknologi & alat dibawah ini berdasarkan pengalaman belajar, hal
+              yang saya sukai dan saya pergunakan untuk bekerja
+            </p>
+          </div>
+        </div>
+        <div className="grid grid-cols-8 gap-5 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10">
+          {skills?.slice(0, skills.length / 2).map((skill) => (
+            <Skill key={skill._id} skill={skill} />
+          ))}
+          {skills?.slice(skills.length / 2, skills.length).map((skill) => (
+            <Skill key={skill._id} skill={skill} directionLeft />
+          ))}
+        </div>
       </div>
-      <div className="w-full absolute top-[25%] bg-[#0045FA]/30 left-0 h-[500px] -skew-y-12"></div>
-    </motion.div>
+    </section>
   );
 }
 

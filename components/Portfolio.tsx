@@ -10,7 +10,7 @@ type Props = {
   projects: Project[];
 };
 
-function Projects({ projects }: Props) {
+function Portfolio({ projects }: Props) {
   const [projectsData, setProjectsData] = useState(projects);
   const [active, setActive] = useState("All");
   const [showDetail, setShowDetail] = useState<string | null>(null);
@@ -34,25 +34,38 @@ function Projects({ projects }: Props) {
   };
 
   return (
-    <div className="relative z-0 flex flex-col items-center h-auto max-w-full mx-auto space-y-32 overflow-hidden text-left md:h-screen md:space-y-52">
-      <h3 className="absolute top-8 md:top-14 uppercase tracking-[20px] text-gray-500 text-md md:text-2xl z-10 space-y-4">
-        Portofolio
-      </h3>
+    <section
+      id="portfolio"
+      className="pb-32 bg-slate-100 pt-36 dark:bg-slate-700"
+    >
+      <div className="container">
+        <div className="w-full px-4">
+          <div className="max-w-xl mx-auto mb-5 text-center">
+            <h4 className="mb-2 text-lg font-semibold text-primary">
+              Portfolio
+            </h4>
+            <h2 className="mb-4 text-3xl font-bold text-dark dark:text-white sm:text-4xl lg:text-5xl">
+              Project Terbaru
+            </h2>
+            <p className="font-medium text-md text-secondary md:text-lg">
+              Ini adalah beberapa hasil projek yang pernah saya kerjakan.
+            </p>
+          </div>
+        </div>
 
-      <div className="flex flex-col items-center justify-start">
-        <div className="absolute z-10 text-sm text-gray-500 uppercase top-20 md:top-32">
+        <div className="flex flex-wrap justify-center w-full px-4 mb-10 xl:mx-auto xl:w-10/12">
           <ProjectsNavbar
             handlerFilterCategory={handlerFilterCategory}
             active={active}
           />
         </div>
 
-        <div className="overflow-y-scroll max-h-[600px] md:max-h-[600px]">
+        <div className="overflow-y-scroll max-h-[600px] md:max-h-[900px] relative">
           <div className="grid grid-cols-2 gap-4 my-3 md:grid-cols-12">
             {projectsData.map((project) => (
               <div
                 key={project.title}
-                className="col-span-12 p-2 bg-white rounded-lg sm:col-span-6 lg:col-span-4 dark:bg-dark-200"
+                className="col-span-12 p-2 bg-white shadow-lg rounded-xl dark:bg-slate-800 sm:col-span-6 lg:col-span-4 "
               >
                 <ProjectCard
                   project={project}
@@ -64,7 +77,7 @@ function Projects({ projects }: Props) {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 
@@ -73,11 +86,14 @@ const NavItem: FunctionComponent<{
   handlerFilterCategory: Function;
   active: string;
 }> = ({ value, handlerFilterCategory, active }) => {
-  let className = "cursor-pointer capitalise hover:text-green heroButton";
-  if (active == value) className += " heroButtonActive";
+  let classNameName = "cursor-pointer capitalise hover:text-green heroButton";
+  if (active == value) classNameName += " heroButtonActive";
 
   return (
-    <button className={className} onClick={() => handlerFilterCategory(value)}>
+    <button
+      className={classNameName}
+      onClick={() => handlerFilterCategory(value)}
+    >
       {value}
     </button>
   );
@@ -88,7 +104,7 @@ const ProjectsNavbar: FunctionComponent<{
   active: string;
 }> = (props) => {
   return (
-    <div className="flex px-3 py-2 space-x-3 overflow-x-auto list-none">
+    <div className="flex px-3 py-2 space-x-3 overflow-x-auto list-none md:text-xl text-md">
       <NavItem value="All" {...props} />
       <NavItem value="Web" {...props} />
       <NavItem value="Mobile" {...props} />
@@ -97,4 +113,4 @@ const ProjectsNavbar: FunctionComponent<{
   );
 };
 
-export default Projects;
+export default Portfolio;

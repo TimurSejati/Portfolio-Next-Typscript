@@ -69,3 +69,9 @@ export interface Social extends SanityBody {
 }
 
 export type Category = "Web" | "Mobile" | "Design";
+
+export interface Quotes extends SanityBody {
+  _type: "quotes";
+  quotes: string;
+  quotesBy: string;
+}

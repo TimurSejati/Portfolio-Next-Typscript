@@ -1,22 +1,24 @@
 // First, we must import the schema creator
-import createSchema from 'part:@sanity/base/schema-creator'
+import createSchema from "part:@sanity/base/schema-creator";
 
 // Then import schema types from any plugins that might expose them
-import schemaTypes from 'all:part:@sanity/base/schema-type'
+import schemaTypes from "all:part:@sanity/base/schema-type";
 
-import experience from './experience';
-import pageInfo from './pageInfo';
-import project from './project';
-import skill from './skill';
-import social from './social';
+import experience from "./experience";
+import pageInfo from "./pageInfo";
+import project from "./project";
+import skill from "./skill";
+import social from "./social";
+import quotes from "./quotes";
 
 export default createSchema({
-  name: 'default',
+  name: "default",
   types: schemaTypes.concat([
     experience,
     pageInfo,
     project,
     skill,
     social,
+    quotes,
   ]),
-})
+});

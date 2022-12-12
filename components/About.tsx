@@ -1,54 +1,46 @@
 import React from "react";
-import { motion } from "framer-motion";
-import { PageInfo } from "../typing";
-import { urlFor } from "../sanity";
-import Link from "next/link";
-import { SocialIcon } from "react-social-icons";
+import { PageInfo, Social } from "../typing";
+import SocialIcon from "./SocialIcon";
 
 type Props = {
   pageInfo: PageInfo;
+  socials: Social[];
 };
 
-export default function About({ pageInfo }: Props) {
+export default function About({ pageInfo, socials }: Props) {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      transition={{ duration: 1.5 }}
-      className="relative flex flex-col items-center h-screen px-10 mx-auto text-center md:text-left md:flex-row max-w-7xl justify-evenly"
-    >
-      <h3 className="absolute top-24 md:top-14 uppercase tracking-[20px] text-gray-500 text-md md:text-2xl">
-        About
-      </h3>
-
-      <motion.img
-        initial={{ x: -200, opacity: 0 }}
-        transition={{ duration: 1.2 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true }}
-        src={urlFor(pageInfo?.profilePic).url()}
-        className="flex-shrink-0 object-cover w-52 h-52 lg:w-56 lg:h-72 -mb-36 rounded-full md:mb-0 md:rounded-lg xl:w-[450px] xl:h-[500px]"
-      />
-
-      <div className="px-0 -mb-24 space-y-10 md:mb-0 md:px-10">
-        <h4 className="-mb-5 text-lg font-semibold md:mb-0 md:text-4xl">
-          Here is a{" "}
-          <span className="underline decoration-[#0045FA]/50">little</span>{" "}
-          background
-        </h4>
-        <p className="text-sm md:text-base">
-          {pageInfo?.backgroundInformation}
-        </p>
-        <div className="w-full md:w-32 text-center heroButtonActive hover:text-white hover:bg-[#0045FA] cursor-pointer p-2">
-          <a
-            target="_blank"
-            href="https://wa.me/+6289508436275"
-            rel="noreferrer"
-          >
-            Hire Me
-          </a>
+    <section id="about" className="pb-32 pt-36 dark:bg-dark">
+      <div className="container">
+        <div className="flex flex-wrap">
+          <div className="w-full px-4 mb-10 lg:w-1/2">
+            <h4 className="mb-3 text-lg font-bold uppercase text-primary">
+              Tentang
+            </h4>
+            <h2 className="max-w-md mb-5 text-3xl font-bold text-dark dark:text-white lg:text-4xl">
+              Siapa Saya?
+            </h2>
+            <p className="max-w-xl text-base font-medium text-secondary lg:text-lg">
+              {pageInfo.backgroundInformation}
+            </p>
+          </div>
+          <div className="w-full px-4 lg:w-1/2">
+            <h3 className="mb-4 text-2xl font-semibold text-dark dark:text-white lg:pt-10 lg:text-3xl">
+              Mari berteman
+            </h3>
+            <p className="mb-6 text-base font-medium text-secondary">
+              Memancing ikan pakai umpan. Umpan nya tidak di makan. Mari kita
+              berkenalan Tambah saudara dan tambah teman 😅.
+            </p>
+            <div className="flex items-center">
+              <SocialIcon socialType="Instagram" socials={socials} />
+              <SocialIcon socialType="Linkedin" socials={socials} />
+              <SocialIcon socialType="Twitter" socials={socials} />
+              <SocialIcon socialType="Facebook" socials={socials} />
+              <SocialIcon socialType="Discord" socials={socials} />
+            </div>
+          </div>
         </div>
       </div>
-    </motion.div>
+    </section>
   );
 }
