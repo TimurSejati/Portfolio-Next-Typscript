@@ -35,14 +35,17 @@ const ProjectCard: FunctionComponent<{
         onClick={() => setShowDetail(_id)}
       />
 
-      <p className="justify-center py-1 text-sm font-medium text-center text-white rounded-bl-md rounded-br-md bg-primary hover:opacity-80">
+      <p
+        className="justify-center py-1 text-sm font-medium text-center text-white cursor-pointer rounded-bl-md rounded-br-md bg-primary hover:opacity-80"
+        onClick={() => setShowDetail(_id)}
+      >
         {title}
       </p>
 
       {showDetail === _id && (
         <>
           <div className="fixed inset-0 z-50 mx-4 mt-24 md:mx-6 md:-mt-36">
-            <div className="absolute top-0 left-0 right-0 z-10 grid w-full h-auto p-3 m-auto text-black lg:w-[1200px] bg-white shadow-lg md:top-72 rounded-xl dark:bg-slate-800 md:grid-cols-2 gap-x-12 z-999">
+            <div className="absolute top-0 left-0 right-0 z-10 grid w-full h-auto p-3 m-auto text-black lg:w-[1000px] bg-white shadow-lg md:top-72 rounded-xl dark:bg-slate-800 md:grid-cols-2 gap-x-12 z-999">
               <div>
                 <img
                   src={urlFor(image).url()}
@@ -84,7 +87,7 @@ const ProjectCard: FunctionComponent<{
                 </h3>
 
                 <h3 className="font-medium text-dark dark:text-white">
-                  Technologies :
+                  Tech Stack :
                 </h3>
                 <div className="flex flex-wrap mt-2 space-x-2 text-sm tracking-wider">
                   {technologies.map((tech) => (
@@ -92,7 +95,7 @@ const ProjectCard: FunctionComponent<{
                       <img
                         key={tech._id}
                         src={urlFor(tech.image).url()}
-                        className="m-1 rounded-full w-7 h-7 md:w-9 md:h-9"
+                        className="m-1 rounded-full shadow-md w-7 h-7 md:w-9 md:h-9"
                       />
                     </span>
                   ))}

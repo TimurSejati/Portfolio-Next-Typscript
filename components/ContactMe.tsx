@@ -29,7 +29,7 @@ function ContactMe({}: Props) {
           <div className="max-w-xl mx-auto mb-16 text-center">
             <h4 className="mb-2 text-lg font-semibold text-primary">Contact</h4>
             <h2 className="mb-4 text-3xl font-bold text-dark dark:text-white sm:text-4xl lg:text-5xl">
-              Hubungi Kami
+              Hubungi Saya
             </h2>
             <p className="font-medium text-md text-secondary md:text-lg">
               Jangan ragu untuk mengirimi saya pesan jika Anda memiliki beberapa

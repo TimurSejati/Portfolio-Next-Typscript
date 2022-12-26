@@ -26,17 +26,17 @@ export default function Hero({ pageInfo }: Props) {
     if (h >= 18 || h < 4) {
       text = "Selamat malam";
     }
-    return `${text}, selamat datang di personal websiteku`;
+    return `${text} & selamat datang teman`;
   };
 
   const [text, count] = useTypewriter({
     words: [
       greetingTime(),
-      `Kenalin saya ${pageInfo?.name}`,
-      "Terimakasih sudah berkunjung 😀",
+      `Perkenalkan saya Timur asal Balikpapan`,
+      "Terimakasih sudah mampir silahkan di lihat-lihat 😀",
     ],
     loop: true,
-    delaySpeed: 4000,
+    delaySpeed: 2000,
   });
   return (
     <section id="home" className="pt-36 dark:bg-dark">
@@ -91,7 +91,7 @@ export default function Hero({ pageInfo }: Props) {
             </h2> */}
 
             <a
-              href="#"
+              href="#contact"
               className="px-8 py-3 text-base font-semibold text-white transition duration-300 ease-in-out rounded-full bg-primary hover:opacity-80 hover:shadow-lg"
             >
               Hubungi Saya

@@ -48,7 +48,7 @@ function Portfolio({ projects }: Props) {
               Project Terbaru
             </h2>
             <p className="font-medium text-md text-secondary md:text-lg">
-              Ini adalah beberapa hasil projek yang pernah saya kerjakan.
+              Beberapa hasil projek portfolio yang pernah di kerjakan.
             </p>
           </div>
         </div>
@@ -65,7 +65,7 @@ function Portfolio({ projects }: Props) {
             {projectsData.map((project) => (
               <div
                 key={project.title}
-                className="col-span-12 p-2 bg-white shadow-lg rounded-xl dark:bg-slate-800 sm:col-span-6 lg:col-span-4 "
+                className="col-span-12 p-2 bg-white shadow-lg rounded-xl dark:bg-slate-800 sm:col-span-6 lg:col-span-3"
               >
                 <ProjectCard
                   project={project}

@@ -32,6 +32,8 @@ type Props = {
   quotes: QuotesType[];
 };
 
+export const revalidate = 30;
+
 const Home = ({
   pageInfo,
   experiences,
@@ -43,7 +45,7 @@ const Home = ({
   return (
     <div className="z-10 overflow-x-hidden overflow-y-scroll text-white scrollbar">
       <Head>
-        <title>Timur Portfolio</title>
+        <title>TimurDev Portfolio</title>
       </Head>
 
       <Header socials={socials} />

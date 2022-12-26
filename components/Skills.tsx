@@ -20,8 +20,8 @@ function Skills({ skills }: Props) {
               Teknologi & Alat
             </h2>
             <p className="font-medium text-md text-secondary md:text-lg">
-              Teknologi & alat dibawah ini berdasarkan pengalaman belajar, hal
-              yang saya sukai dan saya pergunakan untuk bekerja
+              Teknologi & alat berdasarkan pengalaman belajar, hal yang saya
+              sukai dan saya pergunakan untuk bekerja
             </p>
           </div>
         </div>
