@@ -32,7 +32,7 @@ type Props = {
   quotes: QuotesType[];
 };
 
-export const revalidate = 30;
+export const revalidate = 10;
 
 const Home = ({
   pageInfo,
@@ -107,5 +107,6 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
       socials,
       quotes,
     },
+    revalidate: true,
   };
 };
