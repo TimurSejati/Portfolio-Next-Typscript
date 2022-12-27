@@ -20,6 +20,7 @@ export default function Header({ socials }: Props) {
           </div>
           <div className="flex items-center px-4">
             <button
+              aria-label="hamburger"
               type="button"
               id="hamburger"
               name="hamburger"

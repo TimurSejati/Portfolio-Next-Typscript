@@ -18,6 +18,7 @@ function Skill({ directionLeft, skill }: Props) {
       >
         <img
           src={urlFor(skill?.image).url()}
+          alt={skill?.title}
           className="object-cover w-12 h-12 transition duration-300 ease-in-out rounded-lg md:w-24 md:h-24 filter group-hover:grayscale"
         />
         {/* <div className="mt-2 text-xs text-center md:text-md dark:text-white text-dark">

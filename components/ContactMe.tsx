@@ -81,7 +81,7 @@ function ContactMe({}: Props) {
             </div>
             <div className="w-full px-4 mb-8">
               <label
-                htmlFor="pesan"
+                htmlFor="message"
                 className="text-base font-bold text-primary"
               >
                 Message
