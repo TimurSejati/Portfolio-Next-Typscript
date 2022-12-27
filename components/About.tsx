@@ -13,9 +13,7 @@ export default function About({ pageInfo, socials }: Props) {
       <div className="container">
         <div className="flex flex-wrap">
           <div className="w-full px-4 mb-10 lg:w-1/2">
-            <h4 className="mb-3 text-lg font-bold uppercase text-primary">
-              Tentang
-            </h4>
+            <h4 className="mb-3 text-lg font-bold text-primary">Tentang</h4>
             <h2 className="max-w-md mb-5 text-3xl font-bold text-dark dark:text-white lg:text-4xl">
               Siapa Saya?
             </h2>

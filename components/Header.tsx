@@ -13,6 +13,7 @@ export default function Header({ socials }: Props) {
           <div className="px-4">
             <a
               href="#home"
+              aria-label="home"
               className="block py-6 text-lg font-bold text-primary"
             >
               TimurDev.
@@ -39,6 +40,7 @@ export default function Header({ socials }: Props) {
                 <li className="group">
                   <a
                     href="#home"
+                    aria-label="home"
                     className="flex py-2 mx-8 text-base text-dark group-hover:text-primary dark:text-white"
                   >
                     Beranda
@@ -47,6 +49,7 @@ export default function Header({ socials }: Props) {
                 <li className="group">
                   <a
                     href="#about"
+                    aria-label="about"
                     className="flex py-2 mx-8 text-base text-dark group-hover:text-primary dark:text-white"
                   >
                     Tentang Saya
@@ -55,6 +58,7 @@ export default function Header({ socials }: Props) {
                 <li className="group">
                   <a
                     href="#portfolio"
+                    aria-label="portfolio"
                     className="flex py-2 mx-8 text-base text-dark group-hover:text-primary dark:text-white"
                   >
                     Portfolio
@@ -71,6 +75,7 @@ export default function Header({ socials }: Props) {
                 <li className="group">
                   <a
                     href="#contact"
+                    aria-label="contact"
                     className="flex py-2 mx-8 text-base text-dark group-hover:text-primary dark:text-white"
                   >
                     Contact

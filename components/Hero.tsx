@@ -92,6 +92,7 @@ export default function Hero({ pageInfo }: Props) {
 
             <a
               href="#contact"
+              aria-label="contact"
               className="px-8 py-3 text-base font-semibold text-white transition duration-300 ease-in-out rounded-full bg-primary hover:opacity-80 hover:shadow-lg"
             >
               Hubungi Saya

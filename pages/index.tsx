@@ -61,6 +61,7 @@ const Home = ({
 
       <a
         href="#home"
+        aria-label="home"
         className="fixed bottom-2 right-4 z-[9999] hidden h-10 w-10 items-center justify-center rounded-full bg-primary p-4 hover:animate-pulse"
         id="to-top"
       >
@@ -70,6 +71,7 @@ const Home = ({
       <a
         target="_blank"
         href="https://wa.me/+6289508436275"
+        aria-label="whatsapp"
         className="fixed bottom-16 right-4 z-[9999] h-10 w-10 items-center justify-center rounded-full bg-green-500 p-4 hover:animate-pulse"
         rel="noreferrer"
       >

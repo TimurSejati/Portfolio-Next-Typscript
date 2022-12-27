@@ -44,6 +44,7 @@ export default function About({ pageInfo }: Props) {
             target="_blank"
             href="https://wa.me/+6289508436275"
             rel="noreferrer"
+            aria-label="whatsapp"
           >
             Hire Me
           </a>

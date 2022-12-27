@@ -5,7 +5,7 @@ export default function Document() {
     <Html lang="en">
       <Head>
         <meta
-          name="viewport"
+          name="TimurDev Portfolio"
           content="initial-scale=1.0, width=device-width"
           key="TimurDev Portofolio"
         />
