@@ -79,7 +79,7 @@ const ProjectCard: FunctionComponent<{
               </div>
 
               <div>
-                <h2 className="mb-3 overflow-scroll text-xl font-medium text-dark md:text-2xl dark:text-white">
+                <h2 className="mb-3 text-xl font-medium text-dark md:text-2xl dark:text-white">
                   {title}
                 </h2>
                 <h3 className="mb-3 overflow-scroll text-sm text-dark dark:text-white md:font-medium max-h-32 md:max-h-64 scrollbar-none">
