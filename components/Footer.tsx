@@ -19,7 +19,7 @@ export default function Footer({ socials }: Props) {
             <SocialIcon socialType="Discord" socials={socials} />
           </div>
           <p className="text-xs font-medium text-center text-slate-500">
-            &#169; {new Date().getFullYear()} Dibuat dengan{" "}
+            &#169; {new Date().getFullYear()} Created by{" "}
             <span className="text-pink-500">❤️</span>{" "}
             <a
               href="https://instagram.com"
@@ -29,7 +29,7 @@ export default function Footer({ socials }: Props) {
             >
               Timur Dian
             </a>
-            , menggunakan{" "}
+            , using{" "}
             <a
               href="https://tailwindcss.com"
               target="_blank"

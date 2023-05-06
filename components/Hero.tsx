@@ -15,25 +15,25 @@ export default function Hero({ pageInfo }: Props) {
     let s = new Date().getSeconds();
     let text = "";
     if (h >= 4 && h < 10) {
-      text = "Selamat pagi";
+      text = "Good Morning";
     }
     if (h >= 10 && h < 15) {
-      text = "Selamat siang";
+      text = "Good Afternoon";
     }
     if (h >= 15 && h < 18) {
-      text = "Selamat sore";
+      text = "Good Afternoon";
     }
     if (h >= 18 || h < 4) {
-      text = "Selamat malam";
+      text = "Good Night";
     }
-    return `${text} & selamat datang teman`;
+    return `${text}, welcome friends`;
   };
 
   const [text, count] = useTypewriter({
     words: [
       greetingTime(),
-      `Perkenalkan saya Timur asal Balikpapan`,
-      "Terimakasih sudah mampir silahkan di lihat-lihat 😀",
+      `Hi I'm timur from Balikpapan City Indonesia`,
+      "Thankyou for visiting 😀",
     ],
     loop: true,
     delaySpeed: 2000,
@@ -95,7 +95,7 @@ export default function Hero({ pageInfo }: Props) {
               aria-label="contact"
               className="px-8 py-3 text-base font-semibold text-white transition duration-300 ease-in-out rounded-full bg-primary hover:opacity-80 hover:shadow-lg"
             >
-              Hubungi Saya
+              Contact Me
             </a>
           </div>
         </div>

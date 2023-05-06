@@ -29,12 +29,11 @@ function ContactMe({}: Props) {
           <div className="max-w-xl mx-auto mb-16 text-center">
             <h4 className="mb-2 text-lg font-semibold text-primary">Contact</h4>
             <h2 className="mb-4 text-3xl font-bold text-dark dark:text-white sm:text-4xl lg:text-5xl">
-              Hubungi Saya
+              Contact Me
             </h2>
             <p className="font-medium text-md text-secondary md:text-lg">
-              Jangan ragu untuk mengirimi saya pesan jika Anda memiliki beberapa
-              penawaran menarik atau hanya ingin menyapa, saya akan mencoba yang
-              terbaik untuk menghubungi Anda kembali!
+              Feel free to send me a message if you have some interesting offers
+              or just want to say hello, I&#39;ll try my best to get back to you
             </p>
           </div>
         </div>
@@ -56,7 +55,7 @@ function ContactMe({}: Props) {
                 htmlFor="name"
                 className="text-base font-bold text-primary"
               >
-                Nama
+                Name
               </label>
               <input
                 {...register("name")}
@@ -95,7 +94,7 @@ function ContactMe({}: Props) {
             </div>
             <div className="w-full px-4">
               <button className="w-full px-8 py-3 text-base font-semibold text-white transition duration-500 rounded-full bg-primary hover:opacity-80 hover:shadow-lg">
-                Kirim
+                Send
               </button>
             </div>
           </div>

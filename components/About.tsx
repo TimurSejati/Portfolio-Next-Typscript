@@ -13,9 +13,9 @@ export default function About({ pageInfo, socials }: Props) {
       <div className="container">
         <div className="flex flex-wrap">
           <div className="w-full px-4 mb-10 lg:w-1/2">
-            <h4 className="mb-3 text-lg font-bold text-primary">Tentang</h4>
+            <h4 className="mb-3 text-lg font-bold text-primary">About</h4>
             <h2 className="max-w-md mb-5 text-3xl font-bold text-dark dark:text-white lg:text-4xl">
-              Siapa Saya?
+              Who am i?
             </h2>
             <p className="max-w-xl text-base font-medium text-secondary lg:text-lg">
               {pageInfo.backgroundInformation}
@@ -23,7 +23,7 @@ export default function About({ pageInfo, socials }: Props) {
           </div>
           <div className="w-full px-4 lg:w-1/2">
             <h3 className="mb-4 text-2xl font-semibold text-dark dark:text-white lg:pt-10 lg:text-3xl">
-              Mari berteman
+              Let&#39;s be friends
             </h3>
             <p className="mb-6 text-base font-medium text-secondary">
               Memancing ikan pakai umpan. Umpan nya tidak di makan. Mari kita

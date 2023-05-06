@@ -43,7 +43,7 @@ export default function Header({ socials }: Props) {
                     aria-label="home"
                     className="flex py-2 mx-8 text-base text-dark group-hover:text-primary dark:text-white"
                   >
-                    Beranda
+                    Home
                   </a>
                 </li>
                 <li className="group">
@@ -52,7 +52,7 @@ export default function Header({ socials }: Props) {
                     aria-label="about"
                     className="flex py-2 mx-8 text-base text-dark group-hover:text-primary dark:text-white"
                   >
-                    Tentang Saya
+                    About Me
                   </a>
                 </li>
                 <li className="group">

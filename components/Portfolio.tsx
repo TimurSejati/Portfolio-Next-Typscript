@@ -45,10 +45,10 @@ function Portfolio({ projects }: Props) {
               Portfolio
             </h4>
             <h2 className="mb-4 text-3xl font-bold text-dark dark:text-white sm:text-4xl lg:text-5xl">
-              Project Terbaru
+              Projects
             </h2>
             <p className="font-medium text-md text-secondary md:text-lg">
-              Beberapa hasil projek portfolio yang pernah di kerjakan.
+              Some results of portfolio projects that have been done.
             </p>
           </div>
         </div>

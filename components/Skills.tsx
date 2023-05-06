@@ -17,11 +17,11 @@ function Skills({ skills }: Props) {
           <div className="max-w-xl mx-auto mb-16 text-center">
             <h4 className="mb-2 text-lg font-semibold text-primary">Skills</h4>
             <h2 className="mb-4 text-3xl font-bold text-dark dark:text-white sm:text-4xl lg:text-5xl">
-              Teknologi & Alat
+              Technology & Tools
             </h2>
             <p className="font-medium text-md text-secondary md:text-lg">
-              Teknologi & alat berdasarkan pengalaman belajar, hal yang saya
-              sukai dan saya pergunakan untuk bekerja
+              Technology & tools based on learning experience, things I like and
+              use for work
             </p>
           </div>
         </div>
