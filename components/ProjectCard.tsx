@@ -66,10 +66,12 @@ const ProjectCard: FunctionComponent<{
                   )}
                   {linkToDeploy != null && (
                     <a
+                      target="_blank"
                       href={linkToDeploy}
                       className="flex items-center px-4 py-2 space-x-3 rounded-full cursor-pointer bg-primary text-md dark:bg-dark-200"
+                      rel="noreferrer"
                     >
-                      <AiFillProject color="#0045FA" />{" "}
+                      <AiFillProject color="#fff" />{" "}
                       <span className="text-xs text-white md:text-md">
                         Project
                       </span>
