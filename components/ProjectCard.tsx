@@ -6,6 +6,7 @@ import Image from "next/image";
 import { Project } from "../typing";
 import { urlFor } from "../sanity";
 import ModalPortofolio from "./ModalPortofolio";
+import { log } from "console";
 
 const ProjectCard: FunctionComponent<{
   project: Project;
@@ -15,6 +16,9 @@ const ProjectCard: FunctionComponent<{
   project: {
     title,
     image,
+    image2,
+    image3,
+    image4,
     linkToBuild,
     linkToDeploy,
     summary,
@@ -24,6 +28,14 @@ const ProjectCard: FunctionComponent<{
   showDetail,
   setShowDetail,
 }) => {
+  const [selectImage, setSelectImage] = useState(image);
+  const [activeSelectImage, setActiveSelectImage] = useState("image1");
+
+  function changeSelectImage(img: any, imageNumber: string) {
+    setSelectImage(img.target.src);
+    setActiveSelectImage(imageNumber);
+  }
+
   return (
     <div>
       <Image
@@ -48,10 +60,76 @@ const ProjectCard: FunctionComponent<{
             <div className="absolute top-0 left-0 right-0 z-10 grid w-full h-auto p-3 m-auto text-black lg:w-[1000px] bg-white shadow-lg md:top-72 rounded-xl dark:bg-slate-800 md:grid-cols-2 gap-x-12 z-999">
               <div>
                 <img
-                  src={urlFor(image).url()}
+                  src={urlFor(selectImage).url()}
                   alt={title}
                   className="max-h-[400px] min-w-full"
                 />
+                <div className="flex justify-start w-full gap-2 mt-3">
+                  {image2 && (
+                    <div
+                      className={`w-24 h-24 bg-gray-300 cursor-pointer md:w-28 md:h-28 ${
+                        "image1" == activeSelectImage
+                          ? "border-4 border-blue-200"
+                          : "border-none"
+                      }`}
+                      onClick={(image) => changeSelectImage(image, "image1")}
+                    >
+                      <img
+                        src={urlFor(image).url()}
+                        alt={title}
+                        className="min-w-full min-h-full"
+                      />
+                    </div>
+                  )}
+                  {image2 && (
+                    <div
+                      className={`w-24 h-24 bg-gray-300 cursor-pointer md:w-28 md:h-28 ${
+                        "image2" == activeSelectImage
+                          ? "border-4 border-blue-200"
+                          : "border-none"
+                      }`}
+                      onClick={(image2) => changeSelectImage(image2, "image2")}
+                    >
+                      <img
+                        src={urlFor(image2).url()}
+                        alt={title}
+                        className="min-w-full min-h-full"
+                      />
+                    </div>
+                  )}
+                  {image3 && (
+                    <div
+                      className={`w-24 h-24 bg-gray-300 cursor-pointer md:w-28 md:h-28 ${
+                        "image3" == activeSelectImage
+                          ? "border-4 border-blue-200"
+                          : "border-none"
+                      }`}
+                      onClick={(image3) => changeSelectImage(image3, "image3")}
+                    >
+                      <img
+                        src={urlFor(image3).url()}
+                        alt={title}
+                        className="min-w-full min-h-full"
+                      />
+                    </div>
+                  )}
+                  {image4 && (
+                    <div
+                      className={`w-24 h-24 bg-gray-300 cursor-pointer md:w-28 md:h-28 ${
+                        "image4" == activeSelectImage
+                          ? "border-4 border-blue-200"
+                          : "border-none"
+                      }`}
+                      onClick={(image4) => changeSelectImage(image4, "image4")}
+                    >
+                      <img
+                        src={urlFor(image4).url()}
+                        alt={title}
+                        className="min-w-full min-h-full"
+                      />
+                    </div>
+                  )}
+                </div>
                 <div className="flex justify-center my-4 space-x-3">
                   {linkToBuild != null && (
                     <a

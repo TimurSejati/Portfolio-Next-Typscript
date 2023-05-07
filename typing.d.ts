@@ -55,6 +55,9 @@ export interface Project extends SanityBody {
   title: string;
   _type: "project";
   image: Image;
+  image2: Image;
+  image3: Image;
+  image4: Image;
   linkToBuild: string;
   linkToDeploy: string;
   summary: string;
