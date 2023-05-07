@@ -67,7 +67,7 @@ const ProjectCard: FunctionComponent<{
                 <div className="flex justify-start w-full gap-2 mt-3">
                   {image2 && (
                     <div
-                      className={`w-24 h-24 bg-gray-300 cursor-pointer md:w-28 md:h-28 ${
+                      className={`w-18 h-18 bg-gray-300 cursor-pointer md:w-28 md:h-28 ${
                         "image1" == activeSelectImage
                           ? "border-4 border-blue-200"
                           : "border-none"
@@ -83,7 +83,7 @@ const ProjectCard: FunctionComponent<{
                   )}
                   {image2 && (
                     <div
-                      className={`w-24 h-24 bg-gray-300 cursor-pointer md:w-28 md:h-28 ${
+                      className={`w-18 h-18 bg-gray-300 cursor-pointer md:w-28 md:h-28 ${
                         "image2" == activeSelectImage
                           ? "border-4 border-blue-200"
                           : "border-none"
@@ -99,7 +99,7 @@ const ProjectCard: FunctionComponent<{
                   )}
                   {image3 && (
                     <div
-                      className={`w-24 h-24 bg-gray-300 cursor-pointer md:w-28 md:h-28 ${
+                      className={`w-18 h-18 bg-gray-300 cursor-pointer md:w-28 md:h-28 ${
                         "image3" == activeSelectImage
                           ? "border-4 border-blue-200"
                           : "border-none"
@@ -115,7 +115,7 @@ const ProjectCard: FunctionComponent<{
                   )}
                   {image4 && (
                     <div
-                      className={`w-24 h-24 bg-gray-300 cursor-pointer md:w-28 md:h-28 ${
+                      className={`w-18 h-18 bg-gray-300 cursor-pointer md:w-28 md:h-28 ${
                         "image4" == activeSelectImage
                           ? "border-4 border-blue-200"
                           : "border-none"
