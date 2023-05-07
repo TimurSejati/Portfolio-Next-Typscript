@@ -1,5 +1,6 @@
 import React from "react";
 import { Social } from "../typing";
+import Image from "next/image";
 
 type Props = {
   socials: Social[];
@@ -10,14 +11,20 @@ export default function Header({ socials }: Props) {
     <header className="absolute top-0 left-0 z-20 flex items-center w-full bg-transparent">
       <div className="container">
         <div className="relative flex items-center justify-between">
-          <div className="px-4">
-            <a
+          <div className="px-4 py-4">
+            {/* <a
               href="#home"
               aria-label="home"
               className="block py-6 text-lg font-bold text-primary"
             >
               TimurDev.
-            </a>
+            </a> */}
+            <Image
+              src="/brand-logo.svg"
+              width="50"
+              height="50"
+              alt="brand-logo"
+            />
           </div>
           <div className="flex items-center px-4">
             <button

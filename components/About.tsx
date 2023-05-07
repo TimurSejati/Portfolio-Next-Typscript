@@ -25,10 +25,10 @@ export default function About({ pageInfo, socials }: Props) {
             <h3 className="mb-4 text-2xl font-semibold text-dark dark:text-white lg:pt-10 lg:text-3xl">
               Let&#39;s be friends
             </h3>
-            <p className="mb-6 text-base font-medium text-secondary">
+            {/* <p className="mb-6 text-base font-medium text-secondary">
               Memancing ikan pakai umpan. Umpan nya tidak di makan. Mari kita
               berkenalan Tambah saudara dan tambah teman 😅.
-            </p>
+            </p> */}
             <div className="flex items-center">
               <SocialIcon socialType="Instagram" socials={socials} />
               <SocialIcon socialType="Linkedin" socials={socials} />
