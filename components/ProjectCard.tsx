@@ -64,10 +64,10 @@ const ProjectCard: FunctionComponent<{
                   alt={title}
                   className="max-h-[400px] min-w-full"
                 />
-                <div className="flex justify-start w-full gap-2 mt-3">
+                <div className="flex justify-center w-full gap-2 mt-3">
                   {image2 && (
                     <div
-                      className={`w-18 h-18 bg-gray-300 cursor-pointer md:w-28 md:h-28 ${
+                      className={`w-16 h-w-16 bg-gray-300 cursor-pointer ${
                         "image1" == activeSelectImage
                           ? "border-4 border-blue-200"
                           : "border-none"
@@ -83,7 +83,7 @@ const ProjectCard: FunctionComponent<{
                   )}
                   {image2 && (
                     <div
-                      className={`w-18 h-18 bg-gray-300 cursor-pointer md:w-28 md:h-28 ${
+                      className={`w-16 h-w-16 bg-gray-300 cursor-pointer ${
                         "image2" == activeSelectImage
                           ? "border-4 border-blue-200"
                           : "border-none"
@@ -99,7 +99,7 @@ const ProjectCard: FunctionComponent<{
                   )}
                   {image3 && (
                     <div
-                      className={`w-18 h-18 bg-gray-300 cursor-pointer md:w-28 md:h-28 ${
+                      className={`w-16 h-w-16 bg-gray-300 cursor-pointer ${
                         "image3" == activeSelectImage
                           ? "border-4 border-blue-200"
                           : "border-none"
@@ -115,7 +115,7 @@ const ProjectCard: FunctionComponent<{
                   )}
                   {image4 && (
                     <div
-                      className={`w-18 h-18 bg-gray-300 cursor-pointer md:w-28 md:h-28 ${
+                      className={`w-16 h-w-16 bg-gray-300 cursor-pointer ${
                         "image4" == activeSelectImage
                           ? "border-4 border-blue-200"
                           : "border-none"
