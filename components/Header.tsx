@@ -21,8 +21,8 @@ export default function Header({ socials }: Props) {
             </a> */}
             <Image
               src="/brand-logo.svg"
-              width="60"
-              height="60"
+              width="50"
+              height="50"
               alt="brand-logo"
             />
           </div>
