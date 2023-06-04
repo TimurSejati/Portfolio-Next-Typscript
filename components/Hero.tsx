@@ -2,13 +2,15 @@ import Image from "next/image";
 import React from "react";
 import { useTypewriter } from "react-simple-typewriter";
 import { urlFor } from "../sanity";
-import { PageInfo } from "../typing";
+import { PageInfo, Social } from "../typing";
+import SocialIcon from "./SocialIcon";
 
 type Props = {
   pageInfo: PageInfo;
+  socials: Social[];
 };
 
-export default function Hero({ pageInfo }: Props) {
+export default function Hero({ pageInfo, socials }: Props) {
   const greetingTime = () => {
     let h = new Date().getHours();
     let m = new Date().getMinutes();
@@ -38,10 +40,11 @@ export default function Hero({ pageInfo }: Props) {
     loop: true,
     delaySpeed: 2000,
   });
+
   return (
-    <section id="home" className="pt-36 dark:bg-dark">
+    <section id="home" className=" dark:bg-dark">
       <div className="container">
-        <div className="flex flex-wrap">
+        <div className="flex flex-wrap h-screen">
           <div className="self-end w-full px-4">
             <div className="relative flex justify-center -mt-10 lg:right-0 lg:-mt-5">
               <Image
@@ -49,34 +52,19 @@ export default function Hero({ pageInfo }: Props) {
                 alt="heroImage"
                 className="relative object-cover w-32 h-32 mx-auto rounded-full"
                 quality="100"
-                width="150px"
-                height="150px"
+                width="180px"
+                height="180px"
               />
-              {/* <Image
-                src={urlFor(pageInfo?.heroImage).url()}
-                alt="Timur Dian"
-                className="relative z-10 mx-auto w-[350px] max-w-full md:w-[400px]"
-                quality="100"
-                width="300px"
-                height="300px"
-              />
-              <span className="absolute bottom-0 scale-125 -translate-x-1/2 left-1/2 md:bottom-6 md:scale-150">
-                <svg
-                  width="200"
-                  height="200"
-                  viewBox="0 0 200 200"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    fill="#3b82f6"
-                    d="M67.7,-23.3C75.7,2.7,61.9,34.4,38.6,50.8C15.3,67.1,-17.4,68.1,-41.2,51.9C-65,35.8,-79.9,2.5,-71.5,-23.9C-63.1,-50.4,-31.6,-70,-0.9,-69.8C29.8,-69.5,59.7,-49.3,67.7,-23.3Z"
-                    transform="translate(100 100)"
-                  />
-                </svg>
-              </span> */}
             </div>
           </div>
-          <div className="self-center w-full px-4 mt-10 text-center">
+          <div className="w-full px-4 mt-10 text-center">
+            <div className="flex items-center justify-center mb-8">
+              <SocialIcon socialType="Instagram" socials={socials} />
+              <SocialIcon socialType="Linkedin" socials={socials} />
+              <SocialIcon socialType="Twitter" socials={socials} />
+              <SocialIcon socialType="Facebook" socials={socials} />
+              <SocialIcon socialType="Discord" socials={socials} />
+            </div>
             <h1 className="mb-8 text-base font-semibold text-primary md:text-xl lg:text-2xl">
               {pageInfo.role}
 
@@ -85,18 +73,26 @@ export default function Hero({ pageInfo }: Props) {
               </span>
             </h1>
 
-            {/* <h2 className="mb-5 text-lg font-medium text-secondary lg:text-2xl">
-              UI Designer &
-              <span className="text-dark dark:text-white"> Web Developer</span>
-            </h2> */}
-
-            <a
-              href="#contact"
-              aria-label="contact"
-              className="px-8 py-3 text-base font-semibold text-white transition duration-300 ease-in-out rounded-full bg-primary hover:opacity-80 hover:shadow-lg"
-            >
-              Contact Me
-            </a>
+            <div className="flex flex-wrap items-center justify-center gap-8">
+              <div>
+                <a
+                  href="#contact"
+                  aria-label="contact"
+                  className="px-8 py-3 text-base font-semibold text-white transition duration-300 ease-in-out rounded-full bg-primary hover:opacity-80 hover:shadow-lg"
+                >
+                  Contact Me
+                </a>
+              </div>
+              <div>
+                <a
+                  href="#portfolio"
+                  aria-label="portfolio"
+                  className="px-8 py-3 text-base font-semibold transition duration-300 ease-in-out border border-2 rounded-full text-primary border-primary hover:opacity-70 hover:shadow-lg"
+                >
+                  Go to Portfolio
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>

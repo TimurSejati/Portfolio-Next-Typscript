@@ -8,10 +8,7 @@ type Props = {
 
 function Skills({ skills }: Props) {
   return (
-    <section
-      id="portfolio"
-      className="pb-32 bg-slate-100 pt-36 dark:bg-slate-700"
-    >
+    <section id="skills" className="pb-32 bg-slate-100 pt-36 dark:bg-slate-700">
       <div className="container">
         <div className="w-full px-4">
           <div className="max-w-xl mx-auto mb-16 text-center">

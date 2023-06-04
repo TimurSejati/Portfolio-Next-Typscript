@@ -4,12 +4,20 @@ window.onscroll = function () {
   const fixedNav = header.offsetTop;
   const toTop = document.querySelector("#to-top");
 
+  console.log("HEADER", header);
+  console.log("FIXED NAV", fixedNav);
+  console.log("XOFFEST", window.pageYOffset);
+
   if (window.pageYOffset > fixedNav) {
     header?.classList?.add("navbar-fixed");
+  } else {
+    header?.classList?.remove("navbar-fixed");
+  }
+
+  if (window.pageYOffset > 960) {
     toTop?.classList?.remove("hidden");
     toTop?.classList?.add("flex");
   } else {
-    header?.classList?.remove("navbar-fixed");
     toTop?.classList?.add("hidden");
     toTop?.classList?.remove("flex");
   }

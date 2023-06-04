@@ -49,7 +49,7 @@ const Home = ({
       </Head>
 
       <Header socials={socials} />
-      <Hero pageInfo={pageInfo} />
+      <Hero pageInfo={pageInfo} socials={socials} />
       <About pageInfo={pageInfo} socials={socials} />
       <Skills skills={skills} />
       <Quotes quotes={quotes} indexQuote={1} />
