@@ -66,7 +66,7 @@ const ProjectCard: FunctionComponent<{
             <img
               src={urlFor(selectImage).url()}
               alt={title}
-              className="min-h-[300px] min-w-full"
+              className="max-h-[600px] min-w-full"
             />
             <div className="flex justify-center w-full gap-2 mt-3">
               {image2 && (

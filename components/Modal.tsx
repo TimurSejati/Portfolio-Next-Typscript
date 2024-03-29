@@ -35,7 +35,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
                 leaveFrom="opacity-100 translate-y-0 sm:scale-100"
                 leaveTo="opacity-0 translate-y-0 sm:translate-y-0 sm:scale-95"
               >
-                <Dialog.Panel className="w-full px-4 py-4 pb-4 overflow-hidden text-left transition-all transform bg-white rounded-lg dark:bg-slate-800 realative shadow-xls sm:w-full sm:max-w-lg">
+                <Dialog.Panel className="w-full px-4 py-4 pb-4 overflow-hidden text-left transition-all transform bg-white rounded-lg dark:bg-slate-800 realative shadow-xls max-w-[1000px]">
                   <div className="absolute top-0 right-0 z-10 pt-1 pr-1 sm:block">
                     <button
                       type="button"

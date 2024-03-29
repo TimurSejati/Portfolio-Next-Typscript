@@ -88,6 +88,15 @@ export default function Header({ socials }: Props) {
                     Contact
                   </a>
                 </li>
+                <li className="group">
+                  <a
+                    href="https://sejatidimedia-blog.vercel.app"
+                    aria-label="contact"
+                    className="flex py-2 mx-8 text-base text-dark group-hover:text-primary dark:text-white"
+                  >
+                    Blog
+                  </a>
+                </li>
                 <li className="flex items-center pl-8 mt-3 lg:mt-0">
                   <div className="flex">
                     <span className="mr-2 text-md text-slate-500">🌞</span>

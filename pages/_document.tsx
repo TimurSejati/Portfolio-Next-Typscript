@@ -5,10 +5,19 @@ export default function Document() {
     <Html lang="en">
       <Head>
         <meta
-          name="TimurDev Portfolio"
+          name="Timur Dian Radha Sejati"
           content="initial-scale=1.0, width=device-width"
-          key="TimurDev Portofolio"
+          key="TimurDev Portfolio"
         />
+        <meta
+          name="description"
+          content="Kreator Platform Timur Dian Radha Sejati"
+        />
+        <meta
+          name="keywords"
+          content="Sejati Dimedia,Timur Dian Radha Sejati"
+        />
+        <link rel="icon" type="image/svg+xml" href="/brand-logo.svg" />
       </Head>
       <body>
         <Main />
