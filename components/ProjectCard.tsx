@@ -42,7 +42,7 @@ const ProjectCard: FunctionComponent<{
         src={urlFor(image).url()}
         alt={title}
         width="500px"
-        height="320px"
+        height="350px"
         style={{ cursor: "pointer" }}
         onClick={() => {
           setIsOpen(true);
@@ -63,76 +63,78 @@ const ProjectCard: FunctionComponent<{
       <Modal isOpen={isOpen} onClose={() => setIsOpen(false)}>
         <div>
           <div>
-            <img
-              src={urlFor(selectImage).url()}
-              alt={title}
-              className="max-h-[600px] min-w-full"
-            />
-            <div className="flex justify-center w-full gap-2 mt-3">
-              {image2 && (
-                <div
-                  className={`w-16 h-w-16 bg-gray-300 cursor-pointer ${
-                    "image1" == activeSelectImage
-                      ? "border-4 border-blue-200"
-                      : "border-none"
-                  }`}
-                  onClick={(image) => changeSelectImage(image, "image1")}
-                >
-                  <img
-                    src={urlFor(image).url()}
-                    alt={title}
-                    className="min-w-full min-h-full"
-                  />
-                </div>
-              )}
-              {image2 && (
-                <div
-                  className={`w-16 h-w-16 bg-gray-300 cursor-pointer ${
-                    "image2" == activeSelectImage
-                      ? "border-4 border-blue-200"
-                      : "border-none"
-                  }`}
-                  onClick={(image2) => changeSelectImage(image2, "image2")}
-                >
-                  <img
-                    src={urlFor(image2).url()}
-                    alt={title}
-                    className="min-w-full min-h-full"
-                  />
-                </div>
-              )}
-              {image3 && (
-                <div
-                  className={`w-16 h-w-16 bg-gray-300 cursor-pointer ${
-                    "image3" == activeSelectImage
-                      ? "border-4 border-blue-200"
-                      : "border-none"
-                  }`}
-                  onClick={(image3) => changeSelectImage(image3, "image3")}
-                >
-                  <img
-                    src={urlFor(image3).url()}
-                    alt={title}
-                    className="min-w-full min-h-full"
-                  />
-                </div>
-              )}
-              {image4 && (
-                <div
-                  className={`w-16 h-w-16 bg-gray-300 cursor-pointer ${
-                    "image4" == activeSelectImage
-                      ? "border-4 border-blue-200"
-                      : "border-none"
-                  }`}
-                  onClick={(image4) => changeSelectImage(image4, "image4")}
-                >
-                  <img
-                    src={urlFor(image4).url()}
-                    alt={title}
-                    className="min-w-full min-h-full"
-                  />
-                </div>
-              )}
+            <div className="relative">
+              <img
+                src={urlFor(selectImage).url()}
+                alt={title}
+                className="max-h-[520px] min-w-full"
+              />
+              <div className="absolute flex justify-center w-full gap-2 mt-3 bottom-5">
+                {image2 && (
+                  <div
+                    className={`w-16 h-w-16 bg-gray-300 cursor-pointer ${
+                      "image1" == activeSelectImage
+                        ? "border-4 border-blue-200"
+                        : "border-none"
+                    }`}
+                    onClick={(image) => changeSelectImage(image, "image1")}
+                  >
+                    <img
+                      src={urlFor(image).url()}
+                      alt={title}
+                      className="min-w-full min-h-full"
+                    />
+                  </div>
+                )}
+                {image2 && (
+                  <div
+                    className={`w-16 h-w-16 bg-gray-300 cursor-pointer ${
+                      "image2" == activeSelectImage
+                        ? "border-4 border-blue-200"
+                        : "border-none"
+                    }`}
+                    onClick={(image2) => changeSelectImage(image2, "image2")}
+                  >
+                    <img
+                      src={urlFor(image2).url()}
+                      alt={title}
+                      className="min-w-full min-h-full"
+                    />
+                  </div>
+                )}
+                {image3 && (
+                  <div
+                    className={`w-16 h-w-16 bg-gray-300 cursor-pointer ${
+                      "image3" == activeSelectImage
+                        ? "border-4 border-blue-200"
+                        : "border-none"
+                    }`}
+                    onClick={(image3) => changeSelectImage(image3, "image3")}
+                  >
+                    <img
+                      src={urlFor(image3).url()}
+                      alt={title}
+                      className="min-w-full min-h-full"
+                    />
+                  </div>
+                )}
+                {image4 && (
+                  <div
+                    className={`w-16 h-w-16 bg-gray-300 cursor-pointer ${
+                      "image4" == activeSelectImage
+                        ? "border-4 border-blue-200"
+                        : "border-none"
+                    }`}
+                    onClick={(image4) => changeSelectImage(image4, "image4")}
+                  >
+                    <img
+                      src={urlFor(image4).url()}
+                      alt={title}
+                      className="min-w-full min-h-full"
+                    />
+                  </div>
+                )}
+              </div>
             </div>
             <div className="flex justify-center my-4 space-x-3">
               {linkToBuild != null && (
